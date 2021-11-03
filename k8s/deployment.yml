@@ -2,7 +2,7 @@ apiVersion: apps/v1
 kind: Deployment
 metadata:
   name: jquery
-  namespace: jquery
+  namespace: k8s-jquery
 spec:
   selector:
     matchLabels:
