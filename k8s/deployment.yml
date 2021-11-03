@@ -1,0 +1,20 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: k8s-jquery
+  namespace: jquery
+spec:
+  selector:
+    matchLabels:
+      app: jquery
+  replicas: 1 # this much replicas will run, tells deployment to run 2 pods matching the template
+  template:
+    metadata:
+      labels:
+        app: jquery
+    spec:
+      containers:
+      - name: jquery
+        image: 339232133467.dkr.ecr.us-east-2.amazonaws.com/jquery-eks:3
+        ports:
+        - containerPort: 80
