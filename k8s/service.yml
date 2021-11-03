@@ -1,8 +1,8 @@
 apiVersion: v1
 kind: Service
 metadata:
-  name: jquery-svc
-  namespace: k8s-jquery
+  name: jquery
+  namespace: jquery
 spec:
   selector:
     app: jquery
