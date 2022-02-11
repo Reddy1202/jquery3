@@ -1,15 +1,15 @@
 apiVersion: extensions/v1beta1
 kind: Ingress
 metadata:
-  name: static-ingress
-  namespace: static
+  name: jquery-ingress
+  namespace: jquery
   annotations:
     kubernetes.io/ingress.class: nginx
 spec:
   rules:
-  - host: eks.avasaramaa.online
+  - host: jquery.avasaramaa.online
     http:
       paths:
       -  backend:
-          serviceName: k8s-static-svc
+          serviceName: k8s-jquery-svc
           servicePort: 80
