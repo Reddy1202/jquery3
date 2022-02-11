@@ -10,7 +10,6 @@ spec:
   - host: eks.avasaramaa.online
     http:
       paths:
-        backend:
+      -  backend:
           serviceName: k8s-static-svc
           servicePort: 80
-          
