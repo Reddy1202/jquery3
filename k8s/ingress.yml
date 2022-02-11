@@ -1,0 +1,15 @@
+apiVersion: networking.k8s.io/v1
+kind: Ingress
+metadata:
+  name: static-ing
+  namespace: static
+spec:
+  rules:
+  - host: "eks.avasaramaa.online"
+    http:
+      paths:
+        backend:
+          service:
+            name: k8s-static-svc
+            port:
+              number: 80
